@@ -288,72 +288,12 @@
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="components-alerts.html">
-              <i class="bi bi-circle"></i><span>Alerts</span>
+              <i class="bi bi-circle"></i><span>Ciudad</span>
             </a>
           </li>
           <li>
             <a href="components-accordion.html">
-              <i class="bi bi-circle"></i><span>Accordion</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-badges.html">
-              <i class="bi bi-circle"></i><span>Badges</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-breadcrumbs.html">
-              <i class="bi bi-circle"></i><span>Breadcrumbs</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-buttons.html">
-              <i class="bi bi-circle"></i><span>Buttons</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-cards.html">
-              <i class="bi bi-circle"></i><span>Cards</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-carousel.html">
-              <i class="bi bi-circle"></i><span>Carousel</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-list-group.html">
-              <i class="bi bi-circle"></i><span>List group</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-modal.html">
-              <i class="bi bi-circle"></i><span>Modal</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-tabs.html">
-              <i class="bi bi-circle"></i><span>Tabs</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-pagination.html">
-              <i class="bi bi-circle"></i><span>Pagination</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-progress.html">
-              <i class="bi bi-circle"></i><span>Progress</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-spinners.html">
-              <i class="bi bi-circle"></i><span>Spinners</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-tooltips.html">
-              <i class="bi bi-circle"></i><span>Tooltips</span>
+              <i class="bi bi-circle"></i><span>País</span>
             </a>
           </li>
         </ul>
@@ -395,35 +335,35 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="paciente.html">
+        <a class="nav-link collapsed" href="hospitalizacion.html">
           <i class="bi bi-shield-check"></i>
           <span>Hospitalización</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="paciente.html">
+        <a class="nav-link collapsed" href="inyectologia.html">
           <i class="bi bi-clipboard-plus"></i>
           <span>Inyectología</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="paciente.html">
+        <a class="nav-link collapsed" href="evoluciones.html">
           <i class="bi bi-graph-up-arrow"></i>
           <span>Evoluciones</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="paciente.html">
+        <a class="nav-link collapsed" href="notaenfermera.html">
           <i class="bi bi-file-text"></i>
           <span>Notas enfermera</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="paciente.html">
+        <a class="nav-link collapsed" href="formulaciones.html">
           <i class="bi bi-file-earmark-medical"></i>
           <span>Formulaciones</span>
         </a>
@@ -445,7 +385,29 @@
           </ol>
         </nav>
       </div>
+      <button class="btn btn-primary" onclick="show_form(true)">Agregar</button>
     </div>
+
+    <section class="section" id="table">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+
+              <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns"><div class="dataTable-top"><div class="dataTable-dropdown"><label><select class="dataTable-selector"><option value="5">5</option><option value="10" selected="">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option></select> entries per page</label></div><div class="dataTable-search"><input class="dataTable-input" placeholder="Search..." type="text"></div></div><div class="dataTable-container"><table class="table datatable dataTable-table">
+                <thead>
+                  <tr><th scope="col" data-sortable="" style="width: 5.6696%;"><a href="#" class="dataTable-sorter">#</a></th><th scope="col" data-sortable="" style="width: 28.0547%;"><a href="#" class="dataTable-sorter">Name</a></th><th scope="col" data-sortable="" style="width: 37.7322%;"><a href="#" class="dataTable-sorter">Position</a></th><th scope="col" data-sortable="" style="width: 9.28641%;"><a href="#" class="dataTable-sorter">Age</a></th><th scope="col" data-sortable="" style="width: 19.2571%;"><a href="#" class="dataTable-sorter">Start Date</a></th></tr>
+                </thead>
+                <tbody><tr><th scope="row">1</th><td>Brandon Jacob</td><td>Designer</td><td>28</td><td>2016-05-25</td></tr><tr><th scope="row">2</th><td>Bridie Kessler</td><td>Developer</td><td>35</td><td>2014-12-05</td></tr><tr><th scope="row">3</th><td>Ashleigh Langosh</td><td>Finance</td><td>45</td><td>2011-08-12</td></tr><tr><th scope="row">4</th><td>Angus Grady</td><td>HR</td><td>34</td><td>2012-06-11</td></tr><tr><th scope="row">5</th><td>Raheem Lehner</td><td>Dynamic Division Officer</td><td>47</td><td>2011-04-19</td></tr></tbody>
+              </table></div><div class="dataTable-bottom"><div class="dataTable-info">Showing 1 to 5 of 5 entries</div><nav class="dataTable-pagination"><ul class="dataTable-pagination-list"></ul></nav></div></div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="form">
       <div class="row">
@@ -455,24 +417,26 @@
             <div class="card-body pt-4">
 
               <form class="row">
-                <div class="col-6">
+                <div class="col-12 mb-2">
+                  <label for="inputEmail4" class="form-label">Nota introductoria</label>
+                  <textarea class="form-control" placeholder="Ingrese la nota iontroductoria"></textarea>
+                </div>
+                <div class="col-6 mb-2">
                   <label for="inputEmail4" class="form-label">Nro Autorización</label>
                   <input type="number" class="form-control" id="inputEmail4">
                 </div>
-                <div class="col-6">
-                  <label for="inputEmail4" class="form-label">Nota introductoria</label>
-                  <input type="text" class="form-control" id="inputEmail4">
+
+                <div class="col-6 mb-2">
+                  <label for="inputPassword4" class="form-label">Fecha consulta</label>
+                  <input type="date" class="form-control" id="inputPassword4">
                 </div>
-
-                
-
 
                 <table class="table">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
                       <th scope="col">Servicio</th>
-                      <th scope="col">Tipo</th>
+                      <th scope="col">Finalidad de consulta</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -499,17 +463,54 @@
                   </tbody>
                 </table>
 
+                <div class="col-12 mb-2">
+                  <label for="inputPassword4" class="form-label">Motivo consulta</label>
+                  <textarea class="form-control" placeholder="Ingrese el motivo de la consulta"></textarea>
+                </div>
 
-                <div class="col-6">
-                  <label for="inputNanme4" class="form-label"></label>
-                  <input type="date" class="form-control" id="inputNanme4">
+                <div class="col-12 mb-2">
+                  <label for="inputPassword4" class="form-label">Enfermedad actual</label>
+                  <textarea class="form-control" placeholder="Ingrese la enfermedad actual"></textarea>
                 </div>
-                <div class="col-6">
-                  <label for="inputPassword4" class="form-label">Fecha final</label>
-                  <input type="date" class="form-control" id="inputPassword4">
+
+                <div class="col-12 mb-2">
+                  <label for="inputPassword4" class="form-label">Antecedentes</label>
+                  <textarea class="form-control" placeholder="Ingrese los antecedentes"></textarea>
                 </div>
-                <div class="w-100 pt-2 d-flex justify-content-end gap-2">
-                  <button type="submit" class="btn btn-primary">Buscar</button>
+
+                <div class="col-12 mb-2">
+                  <label for="inputPassword4" class="form-label">Exámen físico</label>
+                  <textarea class="form-control" placeholder="Ingrese el exámen físico"></textarea>
+                </div>
+
+                <div class="col-12 mb-2">
+                  <label for="inputPassword4" class="form-label">Medicamentos que está tomando</label>
+                  <textarea class="form-control" placeholder="Ingrese los medicamentos que está tomando"></textarea>
+                </div>
+
+                <div class="col-12 mb-2">
+                  <label for="inputPassword4" class="form-label">Exámenes que trae</label>
+                  <textarea class="form-control" placeholder="Ingrese los exámenes que trae"></textarea>
+                </div>
+
+                <div class="col-6 mb-2">
+                  <label for="inputPassword4" class="form-label">Diagnóstico</label>
+                  <input type="text" class="form-control" placeholder="Diagnóstico">
+                </div>
+
+                <div class="col-6 mb-2">
+                  <label for="inputPassword4" class="form-label">Próxima cita</label>
+                  <input type="date" class="form-control">
+                </div>
+
+                <div class="col-12 mb-2">
+                  <label for="inputPassword4" class="form-label">Adjuntar archivos</label>
+                  <input type="file" class="form-control">
+                </div>
+
+                <div class="w-100 d-flex justify-content-end gap-2 mt-2">
+                  <button type="submit" class="btn btn-primary">Guardar</button>
+                  <button type="button" class="btn btn-secondary" onclick="show_form(false)">Cancelar</button>
                 </div>
               </form>
 
