@@ -12,14 +12,21 @@ function show_form(bool) {
 
 }
 
-const select = (el, all = false) => {
-el = el.trim()
-if (all) {
-    return [...document.querySelectorAll(el)]
-} else {
-    return document.querySelector(el)
-}
-}
+let data = [
+    {nombre: 'Sparky', especie: 'pincher', edad: '4', propietario: 'Juan Gonzalez'},
+    {nombre: 'Jack', especie: 'danés', edad: '2', propietario: 'Jose Sanchez'},
+    {nombre: 'Niño', especie: 'pincher', edad: '5', propietario: 'Diego Lopez'}
+];
+
+$('#tabla').html(data.map((item, index) => {
+    return `<tr>
+                <td>${index + 1}</td>
+                <td>${item.nombre}</td>
+                <td>${item.especie}</td>
+                <td>${item.edad} años</td>
+                <td>${item.propietario}</td>
+            </tr>`;
+}));
 
 const datatables = select('.datatable', true)
 datatables.forEach(datatable => {

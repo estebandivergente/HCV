@@ -274,7 +274,6 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-
       <li class="nav-item">
         <a class="nav-link collapsed" href="index.html">
           <i class="bi bi-grid"></i>
@@ -301,14 +300,14 @@
       </li><!-- End Components Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="agenda.html">
+        <a class="nav-link" href="agenda.html">
           <i class="bi bi-calendar4"></i>
           <span>Agenda</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link" href="paciente.html">
+        <a class="nav-link collapsed" href="paciente.html">
           <i class="bi bi-person"></i>
           <span>Paciente</span>
         </a>
@@ -374,20 +373,22 @@
 
   </aside><!-- End Sidebar-->
   
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css">
+
   <main id="main" class="main">
 
     <div class="pagetitle d-flex justify-content-between align-items-center">
       <div>
-        <h1>Paciente</h1>
+        <h1>Agenda</h1>
         <nav>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-            <li class="breadcrumb-item active">Paciente</li>
+            <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+            <li class="breadcrumb-item active">Agenda</li>
           </ol>
         </nav>
       </div>
 
-      <button class="btn btn-primary" onclick="show_form(true)">Agregar</button>
+      <!-- <button class="btn btn-primary" onclick="show_form(true)">Agregar</button> -->
     </div>
 
     <section class="section" id="table">
@@ -395,20 +396,11 @@
         <div class="col-lg-12">
 
           <div class="card">
-            <div class="card-body">
+            <div class="card-body py-3">
 
-              <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns"><div class="dataTable-top"><div class="dataTable-dropdown"><label><select class="dataTable-selector"><option value="5">5</option><option value="10" selected="">10</option><option value="15">15</option><option value="20">20</option><option value="25">25</option></select> entries per page</label></div><div class="dataTable-search"><input class="dataTable-input" placeholder="Search..." type="text"></div></div><div class="dataTable-container"><table class="table datatable dataTable-table">
-                <thead>
-                  <tr>
-                    <th scope="col" data-sortable=""><a href="#" class="dataTable-sorter">#</a></th>
-                    <th scope="col" data-sortable=""><a href="#" class="dataTable-sorter">Nombre</a></th>
-                    <th scope="col" data-sortable=""><a href="#" class="dataTable-sorter">Especie</a></th>
-                    <th scope="col" data-sortable=""><a href="#" class="dataTable-sorter">Edad</a></th>
-                    <th scope="col" data-sortable=""><a href="#" class="dataTable-sorter">Propietario</a></th>
-                  </tr>
-                </thead>
-                <tbody id="tabla"></tbody>
-              </table></div><div class="dataTable-bottom"><div class="dataTable-info">Showing 1 to 5 of 5 entries</div><nav class="dataTable-pagination"><ul class="dataTable-pagination-list"></ul></nav></div></div>
+             
+              <div id="calendario"></div>
+
 
             </div>
           </div>
@@ -417,120 +409,6 @@
       </div>
     </section>
 
-    <section class="section" id="form">
-      <div class="row">
-        <div class="col-lg-12">
-
-          <div class="card">
-            <div class="card-body">
-              
-              <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#bordered-home" type="button" role="tab" aria-controls="home" aria-selected="true">Propietario</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#bordered-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Paciente</button>
-                </li>
-              </ul>
-
-              <div class="tab-content pt-2" id="borderedTabContent">
-                <div class="tab-pane fade show active" id="bordered-home" role="tabpanel" aria-labelledby="home-tab">
-                  
-
-                <form class="row g-3">
-                  <div class="col-6">
-                    <label for="inputEmail4" class="form-label">Cédula</label>
-                    <input type="number" class="form-control" id="inputEmail4" placeholder="Ingrese la cédula">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputNanme4" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="inputNanme4" placeholder="Ingrese el nombre">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputPassword4" class="form-label">Celular</label>
-                    <input type="text" class="form-control" id="inputPassword4" placeholder="Ingrese el celular">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputAddress" class="form-label">Dirección</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese la dirección">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputAddress" class="form-label">Correo</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese el correo">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputAddress" class="form-label">Clínica remitente</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese la clínica">
-                  </div>
-                  <div class="w-100 d-flex justify-content-end gap-2">
-                    <button type="submit" class="btn btn-primary">Guardar</button>
-                    <button type="button" class="btn btn-secondary" onclick="show_form(false)">Cancelar</button>
-                  </div>
-                </form>
-
-                </div>
-                <div class="tab-pane fade" id="bordered-profile" role="tabpanel" aria-labelledby="profile-tab">
-
-                <form class="row g-3">
-                  <div class="col-6">
-                    <label for="inputNanme4" class="form-label">Nombre del paciente</label>
-                    <input type="text" class="form-control" id="inputNanme4" placeholder="Ingrese el nombre">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputEmail4" class="form-label">Especie</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Ingrese la especie">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputPassword4" class="form-label">Raza</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Ingrese la raza">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputAddress" class="form-label">Sexo</label>
-                    <select class="form-select">
-                      <option>Hembra</option>
-                      <option>Macho</option>
-                    </select>
-                  </div>
-                  <div class="col-6">
-                    <label for="inputAddress" class="form-label">Fecha de nacimiento</label>
-                    <input type="date" class="form-control" id="inputAddress">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputAddress" class="form-label">Edad</label>
-                    <input type="text" class="form-control" id="int_edad" disabled="disabled">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputAddress" class="form-label">Color</label>
-                    <input type="text" class="form-control" id="var_color" placeholder="Ingrese el color">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputAddress" class="form-label">Vacunación</label>
-                    <input type="text" class="form-control" id="var_vacunacion" placeholder="Ingrese la vacunación">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputAddress" class="form-label">Desparasitación</label>
-                    <input type="text" class="form-control" id="int_edad" placeholder="Ingrese la desparasitación">
-                  </div>
-                  <div class="w-100 d-flex justify-content-end gap-2">
-                    <button type="submit" class="btn btn-primary">Guardar</button>
-                    <button type="button" class="btn btn-secondary" onclick="show_form(false)">Cancelar</button>
-                  </div>
-                </form>
-
-                </div>
-                <div class="tab-pane fade" id="bordered-contact" role="tabpanel" aria-labelledby="contact-tab">
-                  Saepe animi et soluta ad odit soluta sunt. Nihil quos omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore dolor.
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
 
   </main><!-- End #main -->
 
@@ -562,10 +440,14 @@
   <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.js"></script>
+  
+  <script src="assets/js/inyectologia.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/paciente.js"></script>
 
 </body>
 
